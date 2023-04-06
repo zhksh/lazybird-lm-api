@@ -1,0 +1,29 @@
+.idea
+*.iml
+
+test.py
+wordlist*
+.vscode
+graphviz
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+
+
+ *.aux
+ *.bcf
+ *.blg
+ *.fdb
+ *.big
+ *.fls
+ *.nav
+ *.out
+ *.synctex.gz
+ *.toc
+ *.vrb
+ *.snm
+ *.snm
+ *.run.xml

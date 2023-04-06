@@ -1,0 +1,75 @@
+POST http://localhost:5000/api/complete-post
+Content-Type: application/json
+
+{
+  "prefix" : "I think you really should",
+  "temperature" : 0.9,
+  "mood" : "frenetic",
+  "ours" : "false"
+
+}
+####
+POST http://localhost:5000/api/create-incontext-post
+Content-Type: application/json
+
+{
+  "context" : [
+    {
+      "input": "Hi Dude",
+      "output": "Hi man, what are you up to ?",
+      "ts": 123918273,
+      "source": "lm"
+    },
+    {
+      "input": "Not much, working mostly.",
+      "output": "Thats too bad im in Malaga !",
+      "ts": 123918373,
+      "source": "lm"
+    }
+  ],
+  "temperature" : 0.4
+}
+
+####
+POST http://lmb.io/api/create-incontext-post
+Content-Type: application/json
+
+{
+  "context" : [
+    {
+      "input": "Hi Dude",
+      "output": "Hi man, what are you up to ?",
+      "ts": 123918273,
+      "source": "lm"
+    },
+    {
+      "input": "Not much, working mostly.",
+      "output": "Thats too bad im in Malaga !",
+      "ts": 123918373,
+      "source": "lm"
+    }
+  ],
+  "temperature" : 0.8
+}
+
+####
+POST http://lmb.io/api/complete-post
+Content-Type: application/json
+
+{
+  "prefix" : "I think my hovercraft is slightly",
+  "temperature" : 0.8
+
+}
+###
+POST http://localhost:5000/api/self-description
+Content-Type: application/json
+
+{
+"prefix" : "",
+"temperature" : 0.9,
+"mood" : "frenetic",
+"ours" : "false",
+  "use_entity": "frue"
+
+}
